@@ -8,13 +8,7 @@ public class TransformTest : MonoBehaviour
     public int TypeOfRotation = 0;
 
     public float RotateSpeed = 60f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -36,8 +30,10 @@ public class TransformTest : MonoBehaviour
     }
 
     void RotateByQuaternion()
-    { 
+    {
         Quaternion target = Quaternion.Euler(0,transform.eulerAngles.y + 1 * RotateSpeed * 360f / 60f * Time.deltaTime, 0);
+
+        //Quaternion target = new Quaternion(0,transform.rotation.y + 1 * RotateSpeed * 360f / 60f * Time.deltaTime, 0,0);
 
         transform.rotation = target;
 
