@@ -32,11 +32,6 @@ public class GetPost : MonoBehaviour
         StartCoroutine(LoadImageGetTexture("https://i1.sndcdn.com/artworks-D4tA2gefvGQHFwjH-oR0vvQ-t500x500.jpg"));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private IEnumerator GetRequest(string uri)
     {

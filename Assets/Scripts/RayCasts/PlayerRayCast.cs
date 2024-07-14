@@ -28,9 +28,27 @@ public class PlayerRayCast : MonoBehaviour
             StartCoroutine(ShotEffect());
             MRayCast();
         }
+
+        if(Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            MShapeCast();
+        }
     }
 
-
+    void MShapeCast()
+    {
+        RaycastHit[] hit = Physics.SphereCastAll(_camera.transform.position,2f,_camera.transform.forward,3f);
+        int countOfBox = 0;
+        foreach(RaycastHit hittble in hit)
+        {
+            if(hittble.transform.GetComponent<CubeOffOn>() != null)
+            {
+                hittble.transform.GetComponent<CubeOffOn>().ActivateTexture();
+                countOfBox++;
+            }
+        }
+        Debug.Log("Box in ray  " + countOfBox);
+    }
 
     void MRayCast()
     {

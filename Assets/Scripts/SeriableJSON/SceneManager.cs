@@ -46,10 +46,8 @@ public class SceneManager : MonoBehaviour
     {
         if (File.Exists(filePath))
         {
-            // Читаем содержимое файла
             string json = File.ReadAllText(filePath);
 
-            // Десериализуем JSON строку в объект
             SettingSeri = JsonUtility.FromJson<SettingSeria>(json);
 
             Debug.Log(SettingSeri.RColor);
