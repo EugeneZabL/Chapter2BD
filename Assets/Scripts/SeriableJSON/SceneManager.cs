@@ -15,11 +15,13 @@ public class SceneManager : MonoBehaviour
 
     SettingSeria SettingSeri;
 
-    string filePath = Path.Combine(Application.streamingAssetsPath, "Seri.json");
+    string filePath;
 
 
     void Start()
     {
+        filePath = Path.Combine(Application.persistentDataPath, "Seri.json");
+
         SettingSeri = new SettingSeria();
     }
 

@@ -49,13 +49,10 @@ public class TransformTest : MonoBehaviour
 
     void FullRotateByQuaternion()
     {
-        // Вычисляем угол вращения на основе скорости и deltaTime
         float rotatio = 0.000000001f  * Time.deltaTime;
 
-        // Создаем кватернион вращения
         Quaternion rotation = new Quaternion(rotatio, rotatio, rotatio, 0.000000001f);
 
-        // Применяем вращение к текущему повороту объекта
         transform.rotation *= rotation;
     }
 
@@ -71,10 +68,8 @@ public class TransformTest : MonoBehaviour
 
     void FullRotateByEuler()
     {
-        // Вычисляем угол вращения на основе скорости и deltaTime
         float rot = RotateSpeed * Time.deltaTime;
 
-        // Применяем вращение к объекту по осям X, Y и Z
         transform.Rotate(rot, rot, rot);
     }
 
