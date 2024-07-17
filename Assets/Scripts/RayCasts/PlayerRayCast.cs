@@ -71,7 +71,7 @@ public class PlayerRayCast : MonoBehaviour
                 break;
 
             case 2:
-                Debug.DrawLine(_camera.transform.position, _camera.transform.forward * 10f, Color.green);
+                Debug.DrawLine(_camera.transform.position, _camera.transform.position + _camera.transform.forward * 10, Color.red);
                 break;
 
             default:

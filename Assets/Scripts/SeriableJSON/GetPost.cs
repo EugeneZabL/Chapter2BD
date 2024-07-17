@@ -35,9 +35,8 @@ public class GetPost : MonoBehaviour
 
     private IEnumerator GetRequest(string uri)
     {
-        using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
-        {
-            // Отправка запроса и ожидание ответа
+        UnityWebRequest webRequest = UnityWebRequest.Get(uri);
+        
             yield return webRequest.SendWebRequest();
 
             if (webRequest.result == UnityWebRequest.Result.ConnectionError || webRequest.result == UnityWebRequest.Result.ProtocolError)
@@ -48,7 +47,6 @@ public class GetPost : MonoBehaviour
             {
                 _responseGet = JsonConvert.DeserializeObject<Response>(webRequest.downloadHandler.text);;
             }
-        }
 
 
         _textGet.text = "Data: " + _responseGet.data + "\n"
@@ -62,26 +60,22 @@ public class GetPost : MonoBehaviour
 
     private IEnumerator PostRequest(string uri, string jsonData)
     {
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
 
-        using (UnityWebRequest webRequest = new UnityWebRequest(uri, "POST"))
+        UnityWebRequest webRequest = new UnityWebRequest(uri, "POST");
+        
+        webRequest.downloadHandler = new DownloadHandlerBuffer();
+
+        yield return webRequest.SendWebRequest();
+
+        if (webRequest.result == UnityWebRequest.Result.ConnectionError || webRequest.result == UnityWebRequest.Result.ProtocolError)
         {
-            webRequest.uploadHandler = new UploadHandlerRaw(bodyRaw);
-            webRequest.downloadHandler = new DownloadHandlerBuffer();
-            webRequest.SetRequestHeader("Content-Type", "application/json");
-
-            // Отправка запроса и ожидание ответа
-            yield return webRequest.SendWebRequest();
-
-            if (webRequest.result == UnityWebRequest.Result.ConnectionError || webRequest.result == UnityWebRequest.Result.ProtocolError)
-            {
-                Debug.LogError("Error: " + webRequest.error);
-            }
-            else
-            { 
-                _responsePost = JsonConvert.DeserializeObject<Response>(webRequest.downloadHandler.text);
-            }
+             Debug.LogError("Error: " + webRequest.error);
         }
+        else
+        { 
+             _responsePost = JsonConvert.DeserializeObject<Response>(webRequest.downloadHandler.text);
+        }
+        
 
         _textPost.text = "Data: " + _responsePost.data + "\n"
               + "Method: " + _responsePost.method + "\n"
