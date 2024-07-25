@@ -57,7 +57,7 @@ public class PlayerRayCast : MonoBehaviour
         if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, 10f))
         {
             if(hit.transform.GetComponent<ButtonRayType>() != null)
-                hit.transform.GetComponent<ButtonRayType>().RayCasted();
+                hit.transform.GetComponent<ButtonRayType>().RayCasted(this);
             _laserLine.SetPosition(1, _camera.transform.position + (_camera.transform.forward * hit.distance));
         }
     }

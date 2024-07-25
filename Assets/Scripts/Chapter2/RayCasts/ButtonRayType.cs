@@ -6,22 +6,22 @@ public class ButtonRayType : MonoBehaviour
 {
     [Range(0, 5)]
     public int TypeButton;
-    public void RayCasted()
+    public void RayCasted(PlayerRayCast player)
     {
         switch(TypeButton)
         {
             case 0:
-                GameObject.FindObjectOfType<PlayerRayCast>().GetComponent<PlayerRayCast>().TypeOfRay = 0 ;
+                player.TypeOfRay = 0 ;
                 Debug.Log("Case 0");
                 break;
 
             case 1:
-                GameObject.FindObjectOfType<PlayerRayCast>().GetComponent<PlayerRayCast>().TypeOfRay = 1;
+                player.TypeOfRay = 1;
                 Debug.Log("Case 1");
                 break;
 
             case 2:
-                GameObject.FindObjectOfType<PlayerRayCast>().GetComponent<PlayerRayCast>().TypeOfRay = 2;
+                player.TypeOfRay = 2;
                 Debug.Log("Case 2");
                 break;
 
@@ -30,9 +30,11 @@ public class ButtonRayType : MonoBehaviour
                 break;
 
             case 4:
+                Debug.Log("Left");
                 break;
 
             case 5:
+                Debug.Log("Right");
                 break;
 
             default:
