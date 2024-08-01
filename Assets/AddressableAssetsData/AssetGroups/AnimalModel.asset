@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: AnimalModel
+  m_EditorClassIdentifier: 
+  m_GroupName: AnimalModel
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 3a9ae8d7356c3364eba03e9db3d61929
+  m_SerializeEntries:
+  - m_GUID: 1299dfd772c05bf4eb2437d163771001
+    m_Address: animal/dog
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78ab6b46f6759214da2ad0b057cbf85a
+    m_Address: animal/deer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 750998db7fd03a34d9b732aa156d66fe
+    m_Address: animal/chicken
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: de55a1fcde4dbcb4592f10c74f25d399, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 58b9b51786b1e3046955bc3c54476bfc, type: 2}
+    - {fileID: 11400000, guid: 844cd76ad8888854496387a12062d6d9, type: 2}

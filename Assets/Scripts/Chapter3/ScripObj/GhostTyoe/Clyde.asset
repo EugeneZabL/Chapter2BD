@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Clyde
   m_EditorClassIdentifier: 
   _name: Clyde
-  _speed: 4.2999997
+  _speed: 4.3
   _delay: 3
   _sprite: {fileID: 462490120, guid: 077d918c789d75b4a9f99b9272f96f4a, type: 3}

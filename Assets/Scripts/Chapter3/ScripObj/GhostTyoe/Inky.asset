@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Inky
   m_EditorClassIdentifier: 
   _name: Inky
-  _speed: 5.2999997
+  _speed: 5.3
   _delay: 2
   _sprite: {fileID: 1851264945, guid: 077d918c789d75b4a9f99b9272f96f4a, type: 3}

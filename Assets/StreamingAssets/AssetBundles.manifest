@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 2065627101
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: animal/maintextureandmaterial
+      Dependencies: {}
+    Info_1:
+      Name: animal/dog
+      Dependencies:
+        Dependency_0: animal/maintextureandmaterial
+    Info_2:
+      Name: animal/chicken
+      Dependencies:
+        Dependency_0: animal/maintextureandmaterial
+    Info_3:
+      Name: animal/deer
+      Dependencies:
+        Dependency_0: animal/maintextureandmaterial

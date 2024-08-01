@@ -1,26 +1,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
+    public Inventory inventory;
     public Transform itemsParent;
     public GameObject inventorySlotPrefab;
 
-    [SerializeField]
-    private TextMeshProUGUI _name;
+    public TextMeshProUGUI InvName;
 
-    public void UpdateUI(Inventory inventory)
+    private void Start()
+    {
+        UpdateUI();
+    }
+
+    public void UpdateUI()
     {
         // Очистить существующий UI
         foreach (Transform child in itemsParent)
         {
             Destroy(child.gameObject);
         }
-
-        _name.text = inventory.InventoryName;
 
         // Заполнить UI элементами инвентаря
         foreach (InventoryItem inventoryItem in inventory.Items)
@@ -41,7 +43,9 @@ public class InventoryUI : MonoBehaviour
             {
                 stackAmount.text = "";
             }
-
+            
         }
+
+        InvName.text = inventory.InventoryName;
     }
 }

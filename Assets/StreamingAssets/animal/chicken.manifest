@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 3849475183
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ae7f441e40b623eabdcd370c21564dc4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 316162263003d3ca5b3ffec5afe24edf
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: ae7f441e40b623eabdcd370c21564dc4
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Animals_FREE/Meshes/Chicken_001.fbx
+Dependencies:
+- D:/UNITY/PROGEDK/Chapter2BD/Assets/AssetBundles/animal/maintextureandmaterial
